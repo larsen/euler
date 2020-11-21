@@ -42,6 +42,16 @@
           maximizing i into max
         finally (return max)))
 
+(defun divisors (n)
+  "Returns the (unsorted) list of divisors of N"
+  (declare (type (integer 0) n))
+  (let ((first-half (loop for i from 1 to (isqrt n)
+                          when (zerop (rem n i))
+                            collect i)))
+    (append first-half
+            (mapcar (lambda (d)
+                      (/ n d))
+                    first-half ))))
 
 ;; Exotic utils
 

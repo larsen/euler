@@ -6,7 +6,7 @@
   :license  "Specify license here"
   :version "0.0.1"
   :serial t
-  :depends-on (#:fiveam)
+  :depends-on (#:fiveam #:alexandria)
   :components ((:file "package")
                (:file "utils")
                (:file "1")
@@ -20,6 +20,7 @@
                (:file "9")
                (:file "10")
                (:file "11")
+               (:file "12")
                (:file "euler"))
   :in-order-to ((test-op (test-op #:euler/test))))
 
