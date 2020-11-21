@@ -16,4 +16,5 @@
   (is (= (p7/solution) 104743))
   (is (= (p8/solution) 23514624000))
   (is (= (p9/solution) 31875000))
-  (is (= (p10/solution) 142913828922)))
+  (is (= (p10/solution) 142913828922))
+  (is (= (p11/solution) 70600674)))
