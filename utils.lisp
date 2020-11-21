@@ -4,8 +4,8 @@
 
 (defun is-prime? (n)
   "Returns T is N is a prime number"
-  (loop for i from 2 to (sqrt n)
-        when (= (rem n i) 0)
+  (loop for i of-type fixnum from 2 to (isqrt n)
+        when (zerop (rem n i))
           return nil
         finally (return t)))
 
