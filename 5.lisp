@@ -1,7 +1,9 @@
 (in-package #:euler)
 
 (defun is-divisible-up-to? (number n)
-  (loop for i from 2 to n
+  (declare (optimize speed))
+  (declare (type fixnum number n))
+  (loop for i of-type integer from 2 to n
         when (not (zerop (rem number i)))
           return nil
         finally (return t)))
