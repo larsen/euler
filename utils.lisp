@@ -53,6 +53,19 @@
                       (/ n d))
                     first-half ))))
 
+;; Sequences
+
+(defun collatz (n)
+  "Returns the list of elements of the Collatz sequence starting with N"
+  (labels ((next (n)
+             (cond
+               ((evenp n) (/ n 2))
+               ((oddp n) (+ (* 3 n) 1)))))
+    (cons n
+          (if (= 1 n)
+              nil
+              (collatz (next n))))))
+
 ;; Exotic utils
 
 (defun is-palindrome-number? (n)
