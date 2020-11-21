@@ -1,0 +1,30 @@
+;;;; euler.asd
+
+(asdf:defsystem #:euler
+  :description "My Project Euler solutions"
+  :author "Stefano Rodighiero"
+  :license  "Specify license here"
+  :version "0.0.1"
+  :serial t
+  :depends-on (#:fiveam)
+  :components ((:file "package")
+               (:file "utils")
+               (:file "1")
+               (:file "2")
+               (:file "3")
+               (:file "4")
+               (:file "5")
+               (:file "6")
+               (:file "7")
+               (:file "8")
+               (:file "9")
+               (:file "10")
+               (:file "euler"))
+  :in-order-to ((test-op (test-op #:euler/test))))
+
+(asdf:defsystem #:euler/test
+  :depends-on (#:euler
+               #:fiveam)
+  :components ((:module "tests"
+                :components ((:file "main"))))
+  :perform (test-op (op _) (symbol-call :fiveam :run-all-tests)))
