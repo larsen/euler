@@ -21,5 +21,6 @@
   (is (= (p12/solution) 76576500))
   (is (string= (p13/solution) "5537376230"))
   (is (= (p14/solution) 837799))
+  (is (= (p15/solution) 137846528820))
   (is (= (p16/solution) 1366))
   (is (= (p20/solution) 648)))

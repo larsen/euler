@@ -18,6 +18,7 @@
            p12/solution
            p13/solution
            p14/solution
+           p15/solution
            p16/solution
            p20/solution))
 
