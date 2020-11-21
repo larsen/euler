@@ -22,6 +22,9 @@
                (:file "11")
                (:file "12")
                (:file "13")
+               (:file "14")
+               (:file "16")
+               (:file "20")
                (:file "euler"))
   :in-order-to ((test-op (test-op #:euler/test))))
 

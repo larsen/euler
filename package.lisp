@@ -16,7 +16,10 @@
            p10/solution
            p11/solution
            p12/solution
-           p13/solution))
+           p13/solution
+           p14/solution
+           p16/solution
+           p20/solution))
 
 (defpackage #:euler/test
   (:use #:cl
