@@ -63,3 +63,26 @@
                                (vertical-quadruplets)
                                (diagonal-quadruplets)
                                (back-diagonal-quadruplets)))))
+
+;; Notes
+;;
+;; Beautiful solution from the forum
+;;
+;; (defun p11pvec (ix iy dx dy)
+;; 	(do ((p 1 (* p (if (array-in-bounds-p p11v y x) (aref p11v y x) 0)))
+;;        (x ix (+ x dx))
+;;        (y iy (+ y dy))
+;;        (c 0 (1+ c)))
+;;       ((= c 4)
+;;        p)))
+
+;; (defun p11 ()
+;; 	(let ((mx 0))
+;; 		(dotimes (x 20)
+;; 			(dotimes (y 20)
+;; 				(setf mx (max mx
+;; 					(p11pvec x y 1 0)
+;; 					(p11pvec x y 0 1)
+;; 					(p11pvec x y 1 1)
+;; 					(p11pvec x y -1 1)))))
+;; 		mx))
