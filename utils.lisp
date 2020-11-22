@@ -28,7 +28,7 @@
         finally (return lst)))
 
 (defun prime-factors (n)
-  "Returns s list containing the prime factors of N"
+  "Returns a list containing the prime factors of N"
   (loop for i from 2 to (sqrt n)
         when (and (is-prime? i)
                   (zerop (rem n i)))
