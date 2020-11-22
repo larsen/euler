@@ -1,7 +1,7 @@
 (in-package #:euler)
 
 (defun triangle (n)
-  (apply #'+ (alexandria:iota n :start 1)))
+  (/ (* n (+ n 1)) 2))
 
 (defun p12/solution ()
   (loop for n integer from 1
