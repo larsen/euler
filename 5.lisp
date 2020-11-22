@@ -8,7 +8,12 @@
           return nil
         finally (return t)))
 
+;; (defun p5/solution ()
+;;   (loop for i from 2
+;;         when (is-divisible-up-to? i 20)
+;;           return i))
+
+;; Faster solution, from the forum
 (defun p5/solution ()
-  (loop for i from 2
-        when (is-divisible-up-to? i 20)
-          return i))
+  (apply #'lcm
+         (loop for i from 1 to 20 collect i)))
