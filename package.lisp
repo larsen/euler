@@ -3,7 +3,7 @@
 (defpackage #:euler
   (:use #:cl)
   (:export is-prime?
-   
+
            p1/solution
            p2/solution
            p3/solution
@@ -20,7 +20,8 @@
            p14/solution
            p15/solution
            p16/solution
-           p20/solution))
+           p20/solution
+           p21/solution))
 
 (defpackage #:euler/test
   (:use #:cl

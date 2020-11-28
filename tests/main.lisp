@@ -1,5 +1,8 @@
 (in-package #:euler/test)
 
+(def-suite project-euler)
+(in-suite project-euler)
+
 (test utils
   (is-true (is-prime? 2))
   (is-true (is-prime? 3))
@@ -23,4 +26,5 @@
   (is (= (p14/solution) 837799))
   (is (= (p15/solution) 137846528820))
   (is (= (p16/solution) 1366))
-  (is (= (p20/solution) 648)))
+  (is (= (p20/solution) 648))
+  (is (= (p21/solution) 31626)))

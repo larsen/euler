@@ -53,6 +53,13 @@
                       (/ n d))
                     first-half ))))
 
+(defun proper-divisors (n)
+  (remove-if (lambda (d) (= n d))
+             (divisors n)))
+
+(defun amicable? (a b)
+  (and (= (reduce #'+ (proper-divisors a)) b)
+       (= (reduce #'+ (proper-divisors b)) a)))
 ;; Sequences
 
 (defun collatz (n)
