@@ -30,4 +30,5 @@
   (is (= (p21/solution) 31626))
   (is (= (p22/solution) 871198282))
   (is (= (p23/solution) 4179871))
-  (is (= (p25/solution) 4782)))
+  (is (= (p25/solution) 4782))
+  (is (= (p25/solution) 9183)))
