@@ -90,6 +90,23 @@
     (string= n-as-string
              (reverse n-as-string))))
 
+;; Other utils
+
+(defun digits (n)
+  "Returns the list of digits of N (as numbers)"
+  (loop for d across (format nil "~A" n)
+        collect (digit-char-p d)))
+
+(defun memo (f)
+  (let ((cache (make-hash-table)))
+    (lambda (x)
+      (if (not (gethash x cache))
+          (setf (gethash x cache) (funcall f x)))
+      (gethash x cache))))
+
+(defun memoize (f)
+  (setf (symbol-function f) (memo (symbol-function f))))
+
 (defun unique (sequence)
   (let ((seen (make-hash-table)))
     (loop for e in sequence
