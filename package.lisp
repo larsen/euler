@@ -22,7 +22,8 @@
            p16/solution
            p20/solution
            p21/solution
-           p22/solution))
+           p22/solution
+           p23/solution))
 
 (defpackage #:euler/test
   (:use #:cl

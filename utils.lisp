@@ -48,10 +48,10 @@
   (let ((first-half (loop for i from 1 to (isqrt n)
                           when (zerop (rem n i))
                             collect i)))
-    (append first-half
-            (mapcar (lambda (d)
-                      (/ n d))
-                    first-half ))))
+    (unique (append first-half
+                     (mapcar (lambda (d)
+                               (/ n d))
+                             first-half )))))
 
 (defun proper-divisors (n)
   (remove-if (lambda (d) (= n d))
@@ -60,6 +60,16 @@
 (defun amicable? (a b)
   (and (= (reduce #'+ (proper-divisors a)) b)
        (= (reduce #'+ (proper-divisors b)) a)))
+
+(defun is-perfect? (n)
+  (= (apply #'+ (proper-divisors n)) n))
+
+(defun is-abundant? (n)
+  (> (apply #'+ (proper-divisors n)) n))
+
+(defun is-deficient? (n)
+  (< (apply #'+ (proper-divisors n)) n))
+
 ;; Sequences
 
 (defun collatz (n)
@@ -79,3 +89,13 @@
   (let ((n-as-string (format nil "~D" n)))
     (string= n-as-string
              (reverse n-as-string))))
+
+(defun unique (sequence)
+  (let ((seen (make-hash-table)))
+    (loop for e in sequence
+          do (incf (gethash e seen 0))
+          finally (return (hash-table-keys seen)))))
+
+(defun range (min max)
+  (loop for i from min to max
+        collect i))
