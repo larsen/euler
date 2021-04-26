@@ -1,7 +1,7 @@
 ;;;; package.lisp
 
 (defpackage #:euler
-  (:use #:cl)
+  (:use #:cl #:alexandria #:cl-ppcre #:split-sequence)
   (:export is-prime?
 
            p1/solution
@@ -21,7 +21,8 @@
            p15/solution
            p16/solution
            p20/solution
-           p21/solution))
+           p21/solution
+           p22/solution))
 
 (defpackage #:euler/test
   (:use #:cl
