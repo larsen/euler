@@ -12,7 +12,7 @@
 (defun primes (n)
   "Returns a list of the first N primes"
   (loop with counter = 0
-        for i from 2 
+        for i from 2
         if (is-prime? i)
           do (incf counter)
           and collect i into lst
@@ -21,8 +21,12 @@
 
 (defun primes-below (n)
   "Returns the list of primes < N"
-  (loop for i from 2 
-        if (is-prime? i)
+  (primes-from-below 2 n))
+
+(defun primes-from-below (p n)
+  (loop for i from p
+        if (and (< i n)
+                (is-prime? i))
           collect i into lst
         until (>= i n)
         finally (return lst)))
@@ -33,6 +37,13 @@
         when (and (is-prime? i)
                   (zerop (rem n i)))
           collect i))
+
+(defun factorization (n)
+  (loop for i from 2 to (isqrt n)
+        when (and (is-prime? i)
+                  (zerop (rem n i)))
+          return (cons i (factorization (/ n i)))
+        finally (return (list n))))
 
 (defun max-prime-factor (n)
   "Return the max prime factor of N"
@@ -116,3 +127,11 @@
 (defun range (min max)
   (loop for i from min to max
         collect i))
+
+(defmacro defun-memoized (name args &body body)
+  `(let ((h (make-hash-table :test #'equalp)))
+    (defun ,name ,args
+      (if (null (gethash (list ,@args) h))
+          (setf (gethash (list ,@args) h)
+                (progn ,@body)))
+      (gethash (list ,@args) h))))
