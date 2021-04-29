@@ -4,10 +4,9 @@
 
 (defun is-prime? (n)
   "Returns T is N is a prime number"
-  (loop for i of-type fixnum from 2 to (isqrt n)
-        when (zerop (rem n i))
-          return nil
-        finally (return t)))
+  (and (not (= n 1))
+       (loop for i of-type fixnum from 2 to (isqrt n)
+             always (not (zerop (rem n i)))))))
 
 (defun primes (n)
   "Returns a list of the first N primes"
