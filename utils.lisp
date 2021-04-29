@@ -134,3 +134,10 @@
           (setf (gethash (list ,@args) h)
                 (progn ,@body)))
       (gethash (list ,@args) h))))
+
+(defun rotations (n)
+  "Returns a list of all the rotations of the digits of N."
+  (let ((digits (coerce (format nil "~a" n) 'list)))
+    (loop for i below (length digits)
+          collect (parse-integer (coerce digits 'string))
+          do (setf digits (rotate digits)))))

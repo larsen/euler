@@ -27,6 +27,7 @@
            p23/solution
            p25/solution
            p29/solution
+           p35/solution
            p67/solution))
 
 (defpackage #:euler/test
