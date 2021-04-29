@@ -95,10 +95,12 @@
 
 ;; Exotic utils
 
-(defun is-palindrome-number? (n)
-  (let ((n-as-string (format nil "~D" n)))
-    (string= n-as-string
-             (reverse n-as-string))))
+(defun is-palindrome-number? (n &key (base 10))
+  (let* ((format (if (= base 2)
+                     "~b"
+                     "~d"))
+         (n-as-string (format nil format n)))
+    (string= n-as-string (reverse n-as-string))))
 
 ;; Other utils
 
