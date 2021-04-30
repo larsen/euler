@@ -4,10 +4,14 @@
 (in-suite project-euler)
 
 (test utils
+  ;; Primality test
   (is-true (is-prime? 2))
   (is-true (is-prime? 3))
   (is-true (is-prime? 17))
-  (is-false (is-prime? 100)))
+  (is-false (is-prime? 100))
+
+  (is (equal (prime-factors 4) '(2)))
+  (is (equal (prime-factors 15) '(3 5))))
 
 (test problems
   (is (= (p1/solution) 233168))

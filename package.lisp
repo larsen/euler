@@ -3,6 +3,7 @@
 (defpackage #:euler
   (:use #:cl #:alexandria #:cl-ppcre #:split-sequence)
   (:export is-prime?
+           prime-factors
 
            p1/solution
            p2/solution

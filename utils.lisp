@@ -32,7 +32,7 @@
 
 (defun prime-factors (n)
   "Returns a list containing the prime factors of N"
-  (loop for i from 2 to (sqrt n)
+  (loop for i from 2 to n
         when (and (is-prime? i)
                   (zerop (rem n i)))
           collect i))
