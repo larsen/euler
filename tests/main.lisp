@@ -11,7 +11,11 @@
   (is-false (is-prime? 100))
 
   (is (equal (prime-factors 4) '(2)))
-  (is (equal (prime-factors 15) '(3 5))))
+  (is (equal (prime-factors 15) '(3 5)))
+
+  (is (equal (totient 2) 1))
+  (is (equal (totient 5) 4))
+  (is (equal (totient 10) 4)))
 
 (test problems
   (is (= (p1/solution) 233168))

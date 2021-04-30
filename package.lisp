@@ -4,6 +4,7 @@
   (:use #:cl #:alexandria #:cl-ppcre #:split-sequence)
   (:export is-prime?
            prime-factors
+           totient
 
            p1/solution
            p2/solution

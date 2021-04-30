@@ -22,6 +22,13 @@
   "Returns the list of primes < N"
   (primes-from-below 2 n))
 
+(defun totient (n)
+  "Returns φ(N)"
+  (if (is-prime? n)
+      (- n 1)
+      (count-if (lambda (k) (relatively-prime n k))
+                (range 1 (- n 1)))))
+
 (defun primes-from-below (p n)
   (loop for i from p
         if (and (< i n)
