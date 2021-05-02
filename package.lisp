@@ -28,6 +28,7 @@
            p21/solution
            p22/solution
            p23/solution
+           p24/solution
            p25/solution
            p29/solution
            p35/solution
