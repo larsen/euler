@@ -47,4 +47,5 @@
   (is (= (p29/solution) 9183))
   (is (= (p35/solution) 55))
   (is (= (p36/solution) 872187))
+  (is (= (p37/solution) 748317))
   (is (= (p67/solution) 7273)))
