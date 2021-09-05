@@ -36,6 +36,7 @@
            p35/solution
            p36/solution
            p37/solution
+           p57/solution
            p67/solution))
 
 (defpackage #:euler/test
