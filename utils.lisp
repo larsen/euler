@@ -5,9 +5,9 @@
 (defun is-prime? (n)
   "Returns T is N is a prime number"
   (and (not (= n 1))
-       (and (not (zerop (rem n 2)))
-        (loop for i of-type fixnum from 3 to (isqrt n) by 2
-              always (not (zerop (rem n i)))))))
+       (or (= n 2) (not (zerop (rem n 2))))
+       (loop for i of-type fixnum from 3 to (isqrt n) by 2
+              always (not (zerop (rem n i))))))
 
 (defun primes (n)
   "Returns a list of the first N primes"
