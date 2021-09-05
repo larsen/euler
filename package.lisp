@@ -24,6 +24,7 @@
            p16/solution
            p17/solution
            p18/solution
+           p19/solution
            p20/solution
            p21/solution
            p22/solution

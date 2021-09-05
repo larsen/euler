@@ -41,6 +41,7 @@
   (is (= (p16/solution) 1366))
   (is (= (p17/solution) 21124))
   (is (= (p18/solution) 1074))
+  (is (= (p19/solution) 171))
   (is (= (p20/solution) 648))
   (is (= (p21/solution) 31626))
   (is (= (p22/solution) 871198282))
