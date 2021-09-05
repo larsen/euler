@@ -9,6 +9,11 @@
   (is-true (is-prime? 3))
   (is-true (is-prime? 17))
   (is-false (is-prime? 100))
+  ;; Carmichael Numbers
+  (is-false (is-prime? 561))
+  (is-false (is-prime? 1105))
+  (is-false (is-prime? 1729))
+  (is-false (is-prime? 2465))
 
   (is (equal (prime-factors 4) '(2)))
   (is (equal (prime-factors 15) '(3 5)))
