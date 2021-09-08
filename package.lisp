@@ -33,6 +33,7 @@
            p25/solution
            p26/solution
            p27/solution
+           p28/solution
            p29/solution
            p35/solution
            p36/solution
