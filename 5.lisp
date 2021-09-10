@@ -4,9 +4,7 @@
   (declare (optimize speed))
   (declare (type fixnum number n))
   (loop for i of-type integer from 2 to n
-        when (not (zerop (rem number i)))
-          return nil
-        finally (return t)))
+        always (zerop (rem number i))))
 
 ;; (defun p5/solution ()
 ;;   (loop for i from 2
