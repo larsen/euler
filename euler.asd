@@ -44,6 +44,7 @@
                (:file "48")
                (:file "57")
                (:file "67")
+               (:file "92")
                (:file "euler"))
   :in-order-to ((test-op (test-op #:euler/test))))
 

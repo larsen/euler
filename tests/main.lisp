@@ -57,4 +57,5 @@
   (is (= (p37/solution) 748317))
   (is (string= (p48/solution) "9110846700"))
   (is (= (p57/solution) 153))
-  (is (= (p67/solution) 7273)))
+  (is (= (p67/solution) 7273))
+  (is (= (p92/solution) 8581146)))

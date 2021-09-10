@@ -40,7 +40,8 @@
            p37/solution
            p48/solution
            p57/solution
-           p67/solution))
+           p67/solution
+           p92/solution))
 
 (defpackage #:euler/test
   (:use #:cl
