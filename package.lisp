@@ -35,6 +35,7 @@
            p27/solution
            p28/solution
            p29/solution
+           p30/solution
            p35/solution
            p36/solution
            p37/solution
